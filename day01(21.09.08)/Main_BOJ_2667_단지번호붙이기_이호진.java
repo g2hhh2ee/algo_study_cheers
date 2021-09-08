@@ -3,7 +3,7 @@ package boj;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main_BOJ_2667_단지번호붙이기_이호진{
+public class Main_2667_단지번호붙이기_이호진{
 
 	static int N;
 	static int[][] map;
