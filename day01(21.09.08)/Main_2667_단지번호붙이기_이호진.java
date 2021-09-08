@@ -34,8 +34,9 @@ public class Main_2667_단지번호붙이기_이호진{
 			}
 		}
 		
+		Arrays.sort(count);
 		System.out.println(cnt);
-		for (int i = 0; i <= cnt; i++) {
+		for (int i = 0; i < count.length; i++) {
 			if(count[i]!=0) {
 				System.out.println(count[i]);
 			}
