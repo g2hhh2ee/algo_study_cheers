@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class dustnrh {
+public class Main_17142_연구소3_한지희 {
     
 // 비활성 바이러스 넣기
 // 바이러스 개수에서 M개 고르는 콤비
