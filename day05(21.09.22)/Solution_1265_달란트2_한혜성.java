@@ -3,14 +3,12 @@ package SWEA;
 import java.io.*;
 import java.util.*;
 
-public class Solution_1265_달란트2_한혜성2 {
+public class Solution_1265_달란트2_한혜성 {
 
 	static int T;
 	static int N, P;
 	static long result; // 곱하기의 맥스값 구하기
-	static int dsum;
 	static int[] val;
-	//static int mount;
 
 	public static void main(String[] args) throws Exception {
 
@@ -23,42 +21,25 @@ public class Solution_1265_달란트2_한혜성2 {
 			N = Integer.parseInt(str[0]);
 			P = Integer.parseInt(str[1]);
 			val = new int[P];
-			result = Long.MIN_VALUE;
-			long ans = 1;
+			result = 1;
+
+			//각 그룹끼리의 차이가 적으면 곱했을 때 큰 수 나옴
+			int ans = N / P;
+			int dif = N % P;
 			
-			// 0 < mount < P - i
-			// dsum = dsum + mount
-			// if(i == P-1) => mount = N - dsum;
-			// P개 다 고르면 값 곱하기 -> 맥스 설정
-			// result => for문으로 val 돌려서 값 곱해 ==> max구하기
-			//20-dsum-(P-1-i) 5 12 1 1 1
-
-			for (int mount = 1; mount <= N - P +1; mount++) {
-				for (int i = 0; i < P; i++) {
-					if (mount > N-P+i+1) {
-						continue;
+			for (int i = 0; i < P; i++) {
+				val[i] = ans;
+				if(dif != 0) {
+					for (int j = 0; j < dif; j++) {
+						val[j] = 1 + ans;
 					}
-					if (i != P - 1 && dsum > N - 1) {
-						continue;
-					}
-					if (i >= 0 && i < P - 1) {
-						val[i] = mount;
-						dsum += mount;
-					}
-					if (i == P - 1) {
-						val[i] = N - dsum;
-
-						for (int j = 0; j < P; j++) {
-							ans = (long)(val[j] * ans);
-						}
-						result = Math.max(result, ans);
-						ans = 1;
-						dsum = 0;
-					}
-
 				}
 			}
-			//System.out.println(Arrays.toString(val));
+			
+			for (int i = 0; i < P; i++) {
+				result = result * (long)val[i];
+			}
+			
 			System.out.println("#" + t + " " + result);
 		}
 
