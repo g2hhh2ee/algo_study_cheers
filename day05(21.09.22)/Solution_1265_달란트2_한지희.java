@@ -22,7 +22,7 @@ public class Solution {
 	        }
 			div++;
 			
-			System.out.println();
+			System.out.println("#"+tc+" "+ ans);
 		}
 		
 		in.close();
