@@ -3,7 +3,7 @@ package SWEA;
 import java.io.*;
 import java.util.*;
 
-public class Solution_1265_달란트2_한혜성2 {
+public class Solution_1265_달란트2_한혜성 {
 
 	static int T;
 	static int N, P;
