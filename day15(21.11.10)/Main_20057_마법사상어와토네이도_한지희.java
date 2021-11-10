@@ -8,8 +8,8 @@ import java.util.StringTokenizer;
 
 public class d1110_b20057_마법사상어와토네이도 {
 	static int N, map[][], result;
-	static int dx[] = {0,1,0,-1};
-    static int dy[] = {-1,0,1,0};
+	static int dr[] = {0,1,0,-1};
+    static int dc[] = {-1,0,1,0};
     static int curr, curc, sum;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
