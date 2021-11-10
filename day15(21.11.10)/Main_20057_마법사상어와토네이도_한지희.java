@@ -10,6 +10,7 @@ public class d1110_b20057_마법사상어와토네이도 {
 	static int N, map[][], result;
 	static int dx[] = {0,1,0,-1};
     static int dy[] = {-1,0,1,0};
+    static int curr, curc, sum;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -22,11 +23,14 @@ public class d1110_b20057_마법사상어와토네이도 {
 				map[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		torn(1,0,0,0,N/2,N/2);
+		curr = N/2;
+		curc = N/2;
+		torn(1,0,0,0,curr,curc);
 		System.out.println();
 	}
-	private static void torn(int cnt, int cntnum, int d, int dirnum, int x, int y) {
-		if(x==0 && y==0) return;
+	private static void torn(int i, int j, int k, int l, int curr2, int curc2) {
+		// TODO Auto-generated method stub
 		
 	}
+	
 }
